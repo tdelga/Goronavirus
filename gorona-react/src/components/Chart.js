@@ -1,4 +1,4 @@
-import { Bar } from "react-chartjs-2";
+import { HorizontalBar } from "react-chartjs-2";
 import React, { Component } from "react";
 
 class Chart extends Component {
@@ -15,14 +15,14 @@ class Chart extends Component {
         ],
         datasets: [
           {
-            label: "Active Cases",
+            label: this.props.label,
             data: [300000, 70000, 50000, 30000, 15000],
             backgroundColor: [
-              "rgba(243,107,107,0.5)",
-              "rgba(243,107,107,0.5)",
-              "rgba(243,107,107,0.5)",
-              "rgba(243,107,107,0.5)",
-              "rgba(243,107,107,0.5)",
+              this.props.backgroundColor,
+              this.props.backgroundColor,
+              this.props.backgroundColor,
+              this.props.backgroundColor,
+              this.props.backgroundColor,
             ],
           },
         ],
@@ -32,16 +32,16 @@ class Chart extends Component {
   render() {
     return (
       <div className="chart">
-        <Bar
+        <HorizontalBar
           data={this.state.chartData}
           options={{
             title: {
               display: true,
               fontSize: 20,
-              text: "Countries with most active cases",
+              text: this.props.titleText,
             },
             responsive: true,
-            maintainAspectRatio: false,
+            aspectRatio: 1,
             scales: {
               xAxes: [
                 {
