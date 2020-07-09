@@ -4,11 +4,13 @@ import "./index.css";
 import App from "./App";
 import Navbar from "./components/Navbar.js";
 import * as serviceWorker from "./serviceWorker";
+import { GetRequest } from './components/GetRequest';
 
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
     <App />
+    <GetRequest />
   </React.StrictMode>,
   document.getElementById("root")
 );
