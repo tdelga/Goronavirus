@@ -3,7 +3,7 @@
 }
 
 .card{
-    margin: 0 2% !important;
+    margin: 0 0 2% 2% !important;
 }
 
 .recuperados{
@@ -16,4 +16,8 @@
 
 .muertos{
     border-bottom: 10px solid rgba(0,0,0,0.5); 
+}
+
+.activos{
+    border-bottom: 10px solid rgba(10,90,255,0.6);
 }

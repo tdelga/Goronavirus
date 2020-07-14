@@ -1,7 +1,6 @@
 import { HorizontalBar } from "react-chartjs-2";
 import React, { Component } from "react";
 import styles from "./Chart.module.css";
-import Jumbotron from "react-bootstrap/Jumbotron";
 
 class Chart extends Component {
   constructor(props) {
@@ -33,11 +32,9 @@ class Chart extends Component {
   }
   render() {
     return (
-      <Jumbotron>
         <div className={styles.chart}>
           <HorizontalBar
             data={this.state.chartData}
-            height={300}
             options={{
               title: {
                 display: true,
@@ -56,7 +53,6 @@ class Chart extends Component {
             }}
           />
         </div>
-      </Jumbotron>
     );
   }
 }
