@@ -1,5 +1,6 @@
 import { HorizontalBar } from "react-chartjs-2";
 import React, { Component } from "react";
+import styles from "./Chart.module.css";
 
 class Chart extends Component {
   constructor(props) {
@@ -31,27 +32,27 @@ class Chart extends Component {
   }
   render() {
     return (
-      <div className="chart">
-        <HorizontalBar
-          data={this.state.chartData}
-          options={{
-            title: {
-              display: true,
-              fontSize: 20,
-              text: this.props.titleText,
-            },
-            responsive: true,
-            aspectRatio: 1,
-            scales: {
-              xAxes: [
-                {
-                  reverse: true, // Esto cambia el orden de los datos, de mayor a menor
-                },
-              ],
-            },
-          }}
-        />
-      </div>
+        <div className={styles.chart}>
+          <HorizontalBar
+            data={this.state.chartData}
+            options={{
+              title: {
+                display: true,
+                fontSize: 20,
+                text: this.props.titleText,
+              },
+              responsive: true,
+              aspectRatio: 1,
+              scales: {
+                xAxes: [
+                  {
+                    reverse: true, // Esto cambia el orden de los datos, de mayor a menor
+                  },
+                ],
+              },
+            }}
+          />
+        </div>
     );
   }
 }

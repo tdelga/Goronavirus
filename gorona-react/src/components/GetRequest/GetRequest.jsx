@@ -29,4 +29,4 @@ class GetRequest extends React.Component {
     }
 }
 
-export { GetRequest }; 
+export default GetRequest; 
