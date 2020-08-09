@@ -2,44 +2,62 @@ import { HorizontalBar } from "react-chartjs-2";
 import React, { Component } from "react";
 import styles from "./Chart.module.css";
 
-class Chart extends Component {
+class Charts extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      chartData: {
-        labels: [
-          "Country 1",
-          "Country 2",
-          "Country 3",
-          "Country 4",
-          "Country 5",
-        ],
-        datasets: [
-          {
-            label: this.props.label,
-            data: [300000, 70000, 50000, 30000, 15000],
-            backgroundColor: [
-              this.props.backgroundColor,
-              this.props.backgroundColor,
-              this.props.backgroundColor,
-              this.props.backgroundColor,
-              this.props.backgroundColor,
-            ],
-          },
-        ],
-      },
+      titulo:'Primer chart test'
     };
   }
+
+
   render() {
+    function ass(arregloC, arregloR, arregloD){
+      return {labels: ["USA","Brasil","Argentina"],
+          
+      datasets: [
+        {
+          label: 'Infectados',
+          backgroundColor: 'rgba(255,99,132,0.2)',
+          borderColor: 'rgba(255,99,132,1)',
+          borderWidth: 1,
+          hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+          hoverBorderColor: 'rgba(255,99,132,1)',
+          data: arregloC
+        },
+        {
+          label: 'Recuperados',
+          backgroundColor: 'rgba(0,255,0,0.2)',
+          borderColor: 'rgba(0,255,0,0.1)',
+          borderWidth: 1,
+          hoverBackgroundColor: 'rgba(0,255,0,0.4)',
+          hoverBorderColor: 'rgba(0,255,0,1)',
+          data: arregloR
+        },
+        {
+          label: 'Fallecidos',
+          backgroundColor: 'rgba(0,0,255,0.2)',
+          borderColor: 'rgba(0,0,255,1)',
+          borderWidth: 1,
+          hoverBackgroundColor: 'rgba(0,0,255,0.4)',
+          hoverBorderColor: 'rgba(0,0,255,1)',
+          data: arregloD
+        },
+
+      ]}
+    
+    };
+    console.log(this.props)
     return (
         <div className={styles.chart}>
           <HorizontalBar
-            data={this.state.chartData}
+            data={ass(this.props.confirmed, this.props.recovered, this.props.deaths)}
+            
             options={{
               title: {
                 display: true,
                 fontSize: 20,
-                text: this.props.titleText,
+                text: this.state.titulo,
               },
               responsive: true,
               aspectRatio: 1,
@@ -54,6 +72,6 @@ class Chart extends Component {
           />
         </div>
     );
+    
   }
-}
-export default Chart;
+}export default Charts;
