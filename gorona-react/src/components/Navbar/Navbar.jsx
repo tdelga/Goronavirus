@@ -1,24 +1,24 @@
 import React from "react";
 import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 
 class Navbar extends React.Component {
   render() {
     return (
-      <div>
-        <header>
           <ul className={styles.nav}>
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">Our Politics</a>
+              <Link to="/cards">Carts</Link>
+            </li>
+            <li>
+              <Link to="/charts">Charts</Link>
             </li>
             <li>
               <a href="https://github.com/tdelga/Goronavirus">Github</a>
             </li>
           </ul>
-        </header>
-      </div>
     );
   }
 }

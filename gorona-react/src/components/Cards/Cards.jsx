@@ -6,7 +6,7 @@ import CountUp from "react-countup";
 
 const Cards = (props) => {
   if(!props.data){
-    return (<h1 style={{textAlign: "center"}}>LOADING DATA, PLEASE WAIT . . . </h1>);
+    return (<h1 className={styles.container} style={{textAlign: "center"}}>LOADING DATA, PLEASE WAIT . . . </h1>);
   }
   return (
     <div className={styles.container}>

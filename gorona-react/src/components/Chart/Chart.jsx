@@ -45,7 +45,7 @@ class Charts extends Component {
         },
 
       ]}
-    
+
     };
     console.log(this.props)
     return (
