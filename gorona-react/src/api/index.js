@@ -11,35 +11,36 @@ export const fetchData = async () => {
     }
 }
 
-const usa = "https://covid19.mathdro.id/api/countries/USA"
-const br = "https://covid19.mathdro.id/api/countries/Brazil"
-const arg = "https://covid19.mathdro.id/api/countries/Argentina"
+const usa = "https://covid19.mathdro.id/api/countries/"
 
-export const fetchCharts = async () => {
+
+export const fetchCharts = async (country) => {
     try {
-        const jasonC = [];
-        const jasonR = [];
-        const jasonD = [];
 
-        const allUsa = await axios.get(usa);
-        const allBr = await axios.get(br);
-        const allArg = await axios.get(arg);
+        const all = await axios.get(usa+country);
         
-        jasonC.push(allUsa.data.confirmed.value);
-        jasonC.push(allBr.data.confirmed.value);
-        jasonC.push(allArg.data.confirmed.value);
-       
-        jasonR.push(allUsa.data.recovered.value);
-        jasonR.push(allBr.data.recovered.value);
-        jasonR.push(allArg.data.recovered.value);
+        const c = (all.data.confirmed.value);
+        const r = (all.data.recovered.value);
+        const d = (all.data.deaths.value);
 
-        jasonD.push(allUsa.data.deaths.value);
-        jasonD.push(allBr.data.deaths.value);
-        jasonD.push(allArg.data.deaths.value);
+        var jso = {};
+        jso["country"] = country;
+        jso["values"] = [c,r,d];
+
+        return jso;
         
-
-        return [jasonC,jasonR,jasonD];
     } catch (error) {
         
     }
 }
+export function getCountries(){
+    var arr =[];
+    try {
+    axios.get("https://covid19.mathdro.id/api/countries").then(coun => {        
+            (coun.data.countries).forEach(element => arr.push({value: element.iso2, label: element.name}))})
+    
+    return arr;
+}
+    catch(error){}
+  }
+
