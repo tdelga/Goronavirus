@@ -67,7 +67,7 @@ class Navbar extends React.Component{
     return(
       <div className={classes.root}>
         <AppBar position="static" color="default" className={classes.AppBar}>
-          <Grid item sm={12} xs={12} className={classes.container}>
+          <Grid item sm={14} xs={14} className={classes.container}>
             <Toolbar>
               <Grid className={classes.grow}>
                 <Button className={[classes.mainLogo]}>
