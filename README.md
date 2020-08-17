@@ -6,33 +6,33 @@ The basic idea is to show statistics about the Coronavirus (Formerly known as CO
 
 All this filtered by region or country if desired.
 
-### 🔸 How we get our data
+## 🔸 How we get our data
 
-[COVID-19 API](https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest)
+- [COVID-19 API](https://github.com/mathdroid/covid-19-api)
 
-### 🔸 How we graphically represent our data
+## 🔸 How we graphically represent our data
 
-[ChartJS](https://www.chartjs.org/)
+- [ChartJS](https://www.chartjs.org/)
 
-### 🔸 Requirements
+## 🔸 Requirements
 
-NodeJS Version >= 12.18.3
+- NodeJS Version >= 12.18.3
 
-Npm Version >= 6.14.6
+- Npm Version >= 6.14.6
 
-(On next release) Django Version >= ?
+- (On next release) Django Version >= ?
 
-### 🔸 How to build the project
+## 🔸 How to build the project
 
-✔️ Git clone the project.
+- Git clone the project.
 
-✔️ Cd into gorona-react directory.
+- Cd into gorona-react directory.
 
-✔️ Do a ``` npm install ``` for the dependencies.
+- Do a ``` npm install ``` for the dependencies.
 
-✔️ Do a ``` npm start ``` and open ``` localhost:3000 ``` on your browser.
+- Do a ``` npm start ``` and open ``` localhost:3000 ``` on your browser.
 
-### 🔸 Roadmap
+## 🔸 Roadmap
 
 - [x] Basic design of the website
 - [x] Cards with global statistics

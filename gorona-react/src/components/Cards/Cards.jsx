@@ -13,23 +13,27 @@ const Cards = (props) => {
     <div className={styles.container}>
       <Grid container spacing={5} justify="center">
         <SelfCard
-            data={props.data.Global.TotalConfirmed}
-            date={props.data.Date}
+            name={"Confirmed"}
+            data={props.data.confirmed.value}
+            date={props.data.lastUpdate}
             style={styles.confirmados}
         />
         <SelfCard
+            name={"Active"}
             data={props.activeCases}
-            date={props.data.Date}
+            date={props.data.lastUpdate}
             style={styles.activos}
         />
         <SelfCard
-            data={props.data.Global.TotalRecovered}
-            date={props.data.Date}
+            name={"Recovered"}
+            data={props.data.recovered.value}
+            date={props.data.lastUpdate}
             style={styles.recuperados}
         />
         <SelfCard
-            data={props.data.Global.TotalDeaths}
-            date={props.data.Date}
+            name={"Deaths"}
+            data={props.data.deaths.value}
+            date={props.data.lastUpdate}
             style={styles.muertos}
         />
       </Grid>
