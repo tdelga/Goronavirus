@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./App.module.css";
-import { Chart, Cards, GetRequest, Navbar } from "./components";
+import { Chart, Cards, RangeCard, Navbar } from "./components";
 import { fetchData } from "./api";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -26,6 +26,9 @@ render(){
         <Switch>
           <Route path="/cards">
             <Cards data={data.data} activeCases={this.state.activeCases} />
+          </Route>
+          <Route path="/calendar">
+            <RangeCard />
           </Route>
           <Route path="/charts">
             <Chart />

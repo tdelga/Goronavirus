@@ -2,7 +2,7 @@ import { Bar } from "react-chartjs-2";
 import React, { Component } from "react";
 import styles from "./Chart.module.css";
 import { fetchCharts } from "./../../api";
-import  Selects  from "./Selects.jsx"
+import  Selects  from "./../Select/Selects"
 
 class Charts extends Component {
 
@@ -54,14 +54,10 @@ class Charts extends Component {
     };
   }
   onChange = (newC) => {
-    this.setState({seleccionados: newC})
-    this.state = {
-      seleccionados : newC
-    };
-
-    this.apppendData(this.getOnlyValues(this.state.seleccionados))
-  };
-
+    this.setState({ seleccionados: newC }, function () {
+      this.apppendData(this.getOnlyValues(this.state.seleccionados))
+    });
+  }
   render() {
     function ass(arregloC, arregloR, arregloD, arregloLabels){
       //cambiar esto por lo del state de seleccionados
@@ -101,7 +97,7 @@ class Charts extends Component {
     };    
     return (
         <div>
-          <Selects selected={this.state.seleccionados} onChange={this.onChange} />
+          <Selects selected={this.state.seleccionados} multi={true} onChange={this.onChange} />
           <div className={styles.chart}>
             <Bar
               data={ass(this.state.dataC, this.state.dataR, this.state.dataD,this.getOnlyLabel(this.state.seleccionados))}

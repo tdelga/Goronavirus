@@ -23,11 +23,12 @@ const handleChange = (selectedOption) => {
 const animatedComponents = makeAnimated();
   return (
     <Select
+    
       closeMenuOnSelect={false}
       components={animatedComponents}
       onChange={handleChange}
       defaultValue={this.props.selected}
-      isMulti
+      isMulti = {this.props.multi}
       options={this.state.countries}
     />
   );

@@ -155,3 +155,5 @@ dmypy.json
 
 # pytype static type analyzer
 .pytype/
+
+/node_modules
