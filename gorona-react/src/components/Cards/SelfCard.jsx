@@ -8,7 +8,7 @@ const SelfCard = (props) => {
   return (
         <Grid item component={Card} xs={12} md={4} className={cx(styles.card, props.style)}>
             <CardContent>
-                <Typography color="textSecondary" gutterBottom>Confirmed</Typography>
+                <Typography color="textSecondary" gutterBottom>{props.name}</Typography>
                 <Typography variant="h5">
                 <CountUp start={0} end={props.data} duration={2.5} separator="," />
                 </Typography>

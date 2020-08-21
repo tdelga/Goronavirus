@@ -12,8 +12,9 @@ class App extends React.Component {
   async componentDidMount(){
     const fetchedData = await fetchData();
 
-    const activeCases = fetchedData.data.Global.TotalConfirmed - fetchedData.data.Global.TotalRecovered;
+    const activeCases = fetchedData.data.confirmed.value - fetchedData.data.recovered.value;
     this.setState({ data: fetchedData, activeCases});
+    console.log(fetchedData);
     
   }
 
