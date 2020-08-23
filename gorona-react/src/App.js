@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./App.module.css";
-import { Chart, Cards, RangeCard, Navbar } from "./components";
+import { Chart, Cards, RangeCard, Navbar, ExtraInfo } from "./components";
 import { fetchData } from "./api";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 class App extends React.Component {
   state = {
@@ -34,9 +35,12 @@ render(){
           <Route path="/charts">
             <Chart />
           </Route>
+          <Route path="/extra-info">
+            <ExtraInfo />
+          </Route>
           <Route path="/">
             <Home />
-          </Route>
+          </Route>  
         </Switch>
     </Router>
   );

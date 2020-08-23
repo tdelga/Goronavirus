@@ -74,6 +74,7 @@ class Navbar extends React.Component{
                   <Avatar src="./coronaIcon.png" onClick={()=> alert('Que aseeeeeee xd aca iria un efecto piolita')} className={classes.avatar} />
                 </Button>
               </Grid>
+              <Button color="inherit" component={Link} to="/extra-info" className={classes.buttonFontSize}>Extra Info</Button>
               <Button color="inherit" component={Link} to="/calendar" className={classes.buttonFontSize}>Calendar</Button>
               <Button color="inherit" component={Link} to="/cards" className={classes.buttonFontSize}>Carts</Button>
               <Button color="inherit" component={Link} to="/charts" className={classes.buttonFontSize}>Charts</Button>
