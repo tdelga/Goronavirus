@@ -6,7 +6,7 @@ The basic idea is to show statistics about the Coronavirus (Formerly known as CO
 
 All this filtered by region or country if desired.
 
-## 🔸 How we get our data
+## 🔸 How we get our data sd
 
 - [COVID-19 API](https://github.com/mathdroid/covid-19-api)
 
