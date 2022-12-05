@@ -1,4 +1,4 @@
-# (Djan)Goronavirus
+# (Djan)GoronavirusS
 
 This project came to life based on the idea to learn React.js and ~~Go~~ Django at the same time in an interesting and interactive way.
 
